@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ClForm
-from .models import Client
+from .models import Client, Product
 from django.http import Http404
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.decorators import login_required
@@ -46,3 +46,14 @@ def event(request, event_id): #views.py의 pk변수명과 urls.py의 변수명�
     event = get_object_or_404(Event, pk = event_id) #모델과 pk를 designer_id라고 부를거야
     return render(request, 'event.html',{'event':event})
     #값을 보낼거임
+
+def product(request, store_id, menu_id): #product.html
+    products = User.objects.all()
+    store = get_object_or_404(Product, pk = product_id)
+    product_object = get_object_or_404(Product, pk=product_id)
+    product = product_object.menu.split('\r\n')[menu_id - 1].split(':')[0]
+    product_price = product_object.menu.split('\r\n')[menu_id - 1].split(':')[1]
+    total = 0
+    for price in products:
+        total += price.price
+    return render(request,'product.html', {'product':product,'products':products,'product':product,'product_price':product_price,'total':total})
