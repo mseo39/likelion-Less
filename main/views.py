@@ -5,9 +5,7 @@ from django.http import Http404
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.decorators import login_required
 
-def home(request):
-    #queryset을 templates로 보내기
-    designers = Designer.objects.all()
+def main(request):
     return render(request,'main.html')
 
 @login_required(login_url='/login/')
