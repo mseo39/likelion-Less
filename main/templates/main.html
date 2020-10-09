@@ -1,1 +1,36 @@
-ddd
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <div class="box_image_1">
+        <img src="/static/images/main.jpg" alt="main" width="100%">
+    </div>
+    <div id="grid">
+        <h2>상품목록</h2>
+        {% for product in product_pages %}
+        <div class="card_1">
+        <img src="{{ product.image.url }}" width="100%">
+        {%endfor%}
+    </div>
+
+    <div class="grid_2">
+        <h2>EVENT</h2>
+        {% for event in event_page %}
+        <div class="card_2">
+        <img src="{{ event.image.url }}" width="100%"> 
+        <h4> {{ event.name }}</h4>
+        <p>{{ event.content }}</p>
+    
+        </div>
+        {%endfor%}
+    </div>
+</body>
+{% endblock %}
+</html>
