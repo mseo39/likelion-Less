@@ -21,7 +21,7 @@ def create(request):
 @login_required(login_url='/login/')
 def detail(request, cl_id):
     my_cl = get_object_or_404(Product, pk=cl_id)
-    return render(request, 'detail.html', {'my_cl' : my_cl}
+    return render(request, 'detail.html', {'my_cl' : my_cl})
 
 def delete(request, cl_id):
     my_cl = cl.objects.get(pk=cl_id)
@@ -41,3 +41,8 @@ def update(request, cl_id):
             return redirect('index')
 
     return render(request, 'create.html', {'cl_form' : cl_form})
+
+def event(request, event_id): #views.py의 pk변수명과 urls.py의 변수명은 같아야 함
+    event = get_object_or_404(Event, pk = event_id) #모델과 pk를 designer_id라고 부를거야
+    return render(request, 'event.html',{'event':event})
+    #값을 보낼거임
