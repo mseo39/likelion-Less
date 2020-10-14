@@ -63,3 +63,6 @@ def product(request, store_id, menu_id): #product.html
 
 def payment(request):
     return render(request,'payment.html')
+
+def goods(request):
+    return render(request,'goods.html')
