@@ -60,3 +60,9 @@ def product(request, store_id, menu_id): #product.html
     for price in products:
         total += price.price
     return render(request,'product.html', {'product':product,'products':products,'product':product,'product_quantity':product_quantity,'total':total})
+
+def payment(request):
+    return render(request,'payment.html')
+
+def goods(request):
+    return render(request,'goods.html')
