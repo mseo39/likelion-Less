@@ -6,50 +6,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
-    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body>
+    <!-- 메인 사진 -->
     <div class="box_image_1">
         <img src="/static/images/main.jpg" alt="main" width="100%">
     </div>
-    <div id="grid">
-        <div class="main_product">
 
-            <img src="/static/images/onion.jpg" alt="main_product">
-            <img src="/static/images/paprika.jpg" alt="main_product">
-            <img src="/static/images/potato.jpg" alt="main_product">
-            <img src="/static/images/carot.jpg" alt="main_product">
+    <!-- 상품목록-->
+
+    
+     <h1>상품목록</h1>
+     <div id="grid" style="text-align: center;">
+        <div class="product_image1"
+        >
+            <img src="/static/images/onion.jpg" alt="main_product" width="200px" style="padding-right: 50px; ">
+
+            <h4>양파</h4>
+            <br><font color="gray">개당</font>
+            <p><h4>￦1,500</h4></p>
+        </div>
+
+        <div class="product_image1">
+
+            <img src="/static/images/paprika.jpg" alt="main_product" width="200px" style="padding-right: 50px;">
+
+            <h4>피망</h4>
+            <br><font color="gray">개당</font>
+            <p><h4>￦1,500</h4></p>
+
+        </div>
+            
+        <div class="product_image1">
+
+            <img src="/static/images/potato.jpg" alt="main_product" width="200px" style="padding-right: 50px;">
+
+            <h4>감자</h4>
+            <br><font color="gray">개당</font>
+            <p><h4>￦1,500</h4></p>
+
+        </div>
+
+        <div class="product_image1">
+            <img src="/static/images/carot.jpg" alt="main_product" width="200px">
+            <h4>당근</h4>
+            <br><font color="gray">개당</font>
+            <p><h4>￦1,500</h4></p>
+        </div>
 
         </div>
     </div>
 
-    <div class="grid_2">
-        <h2>EVENT</h2>
+    <!-- 이벤트 -->
+    <h1>EVENT</h1>
+    <div id="grid_2">
         <div class="main_event">
-
-            <img src="/static/images/onegreen.jpg" alt="event_1" >
-
-            <h3>#용기내 캠페인</h3>
-            <p>롯데마트는 용기내 캠페인과 함께합니다.</p>
+            <img src="/static/images/onegreen.jpg" alt="event_1" width="500px" >
+                <div class="main_event_text">
+                    <h3>#용기내 캠페인</h3>
+                    <p>롯데마트는 용기내 캠페인과 함께합니다.</p>
+                </div>
         </div>
 
         <div class="main_event_2">
-
-            <img src="/static/images/lifegreen.jpg" alt="event_2" >
-
+            <img src="/static/images/lifegreen.jpg" alt="event_2" width="600px">
+            
             <h3>#NO PLASTIC</h3>
             <p>매년 7월3일은 노 플라스틱날<br> 롯데마트가 2025년 까지 플라스틱을 줄이기 위해 노력하겠습니다. </p>
+            
         </div>
 
         <div class="main_event_3">
 
-            <img src="/static/images/sidedish.jpg" alt="event_3" >
+            <img src="/static/images/sidedish.jpg" alt="event_3" width="600px">
 
             <h3>반찬 용기 가져오세요!</h3>
             <p>반찬 용기를 가져오면 반찬 20%를 더 드립니다!!!</p>
-        </div>
 
+        </div>
     </div>
 </body>
 {% endblock %}
