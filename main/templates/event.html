@@ -1,4 +1,6 @@
-{% load static %}
+{% extends "base.html" %}
+{%load static%}
+
 <!doctype html>
 <html lang="en">
 
@@ -60,8 +62,8 @@
     <link href="album.css" rel="stylesheet">
     <!--부트스램에 css를 새로 적용할 때는 여기에 적자 위에서부터 차례대로 읽기 때문-->
     <!--css static-->
-    <link rel="stylesheet" href="static 'css/base.css'">
-    <link rel="stylesheet" href="static 'css/event.css'">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/event.css' %}">
 
 </head>
 <!--header-->
