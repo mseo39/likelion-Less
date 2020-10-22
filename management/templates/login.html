@@ -1,9 +1,24 @@
-<h1>로그인 페이지</h1>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>less - 로그인</title>
+	<link rel="stylesheet" type="text/css" href="/static/login.css">
+</head>
 
-<form method="POST" action="">
-
-{% csrf_token %}
-{{form}}
-<input type="submit" value="로그인">
-
-</form>
+<body>
+    <div id="login" align="center">
+    <img src="/static/images/logo.png" alt="logo" width="200px">
+    <fieldset>
+        <ul>
+            <h1 style="color: #8DB72A;">로그인 페이지</h1>
+            <div class="login">
+                <input type="text" placeholder="username">
+                <br><br>
+                <input type="password" placeholder="password">
+                <br><br>
+                <button>로그인</button>
+                <p class="message">계정이 없으신가요? <a href="http://127.0.0.1:8000/signup/">회원가입하기</a></p>
+            </div>
+    </fieldset>
+    </div>
+</body>
