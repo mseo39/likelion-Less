@@ -81,30 +81,27 @@
                         <div class="col-md-4">
 							<img src="/static/images/onion.jpg" alt="payment_1" width="100px">
                             <br>
-						    <label><input type="checkbox">[낱개] 양파(3개)</label>
-						    <label><input type="number" value="0" min="2100" max="21000">원 </label>
+						    <label><input type="radio" name='goods_1' value='onion'>[낱개] 양파(3개)</label>
                         </div>
                     </li>
 					<li>
                         <div class="col-md-4">
 							<img src="/static/images/porkbelly.jpg" alt="payment_2" width="100px">
                             <br>
-						    <label><input type="checkbox">목우촌 프로포크 삼겹살(구이용)(100g)</label>
-						    <label><input type="number" value="0" min="2,780" max="27,800">원 </label>
+						    <label><input type="radio" name='goods_2' value='porkbelly'>목우촌 프로포크 삼겹살(구이용)(100g)</label>
                         </div>
                     </li>
 					<li>
                         <div class="col-md-4">
 							<img src="/static/images/shinemuscat.jpg" alt="payment_3" width="100px">
 						    <br>
-                            <label><input type="checkbox">샤인머스켓(1.5kg/박스)</label>
-						    <label><input type="number" value="0" min="29,800" max="298,000">원 </label>
+						    <label><input type="radio" name='goods_3' value='shinemuscat'>샤인머스켓(1.5kg/박스)</label>
                         </div>
 					</li>
 				</ul>
 			</fieldset>
 			<div class="centered">
-				<input type="submit" value="주문하기" oneclick='alert("주문이 완료되었습니다.")'/>
+				<input type="submit" value="주문하기" oneclick='alert("주문이 완료되었습니다.")'>
 				<input type="reset" value="다시 작성">
 			</div>
 		</form>
