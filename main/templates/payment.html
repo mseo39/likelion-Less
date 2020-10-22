@@ -1,7 +1,7 @@
-<!doctype html>
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
+	<img src="/static/images/logo.png" alt="logo" width="200px">
 	<title>결제</title>
 	<link rel="stylsheet" href="style.css">
 	<style>
@@ -43,27 +43,27 @@
 </head>
 <body>
 	<div class="container">
-		<h1>결제</h1> {% comment %} "결제"라는 타이틀 앞에 less 로고 넣어야함. 언니가 base.html 만들 때 왼쪽 상단에 로고 넣어서 해주세요. {% endcomment %}
+		<h1 style="color: #8DB72A;">결제</h1>
 		<form>
 			<fieldset>
-				<legend>배송 정보</legend>
+				<legend style="color: #888B81;">배송 정보</legend>
 				<ul>
 					<li>
 						<label for="uname" class="title">받는 사람</label>
-						<input type="text" id="uname" placeholder="여백없이 입력" required>
+						<input type="text" id="uname" placeholder="여백 없이 입력" required>
 					</li>
 					<li>
 						<label for="tel1" class="title">연락처</label>
-						<input type="tel" id="tel1" placeholder="연락가능한 번호">
+						<input type="tel" id="tel1" placeholder="연락 가능한 번호">
 					</li>
 				</ul>
 			</fieldset>
 			<fieldset>
-				<legend>배송지 정보</legend>
+				<legend style="color: #888B81;">배송지 정보</legend>
 				<ul>
 					<li>
                         <div class="button" color="#8DB72A">
-				            <input type="submit" color="#8DB72A" value="주소찾기">
+				            <input type="submit" color="#8DB72A" value="주소 찾기">
 			            </div>
                         <label for="tel1" class="title">우편번호</label>
 						<input type="tel" id="tel2" placeholder="우편번호">
@@ -75,7 +75,7 @@
 				</ul>
 			</fieldset>
 			<fieldset>
-				<legend>주문 정보</legend>
+				<legend style="color: #888B81;">주문 정보</legend>
 				<ul>
 					<li>
                         <div class="col-md-4">
@@ -98,13 +98,13 @@
 							<img src="/static/images/shinemuscat.jpg" alt="payment_3" width="100px">
 						    <br>
                             <label><input type="checkbox">샤인머스켓(1.5kg/박스)</label>
-						    <label><input type="number" value="0" min="29,800" max="29,8000">원 </label>
+						    <label><input type="number" value="0" min="29,800" max="298,000">원 </label>
                         </div>
 					</li>
 				</ul>
 			</fieldset>
 			<div class="centered">
-				<input type="submit" value="주문하기">
+				<input type="submit" value="주문하기" oneclick='alert("주문이 완료되었습니다.")'/>
 				<input type="reset" value="다시 작성">
 			</div>
 		</form>
