@@ -1,29 +1,67 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>상품명</title>
-	<link rel="stylsheet" href="style.css">
+	<title>less - 상품</title>
+	<link rel="stylesheet" type="text/css" href="goods.css">
 </head>
-<body>
-	<div class="card">
-		<div class="top-section">
-			<img src="{{ images.url }}" alt="onion.jpg">
-		</div>
-		<div class="name">[낱개] 양파(3개)</div>
-		<div class="price">2,100원</div>
 
-		<div class="top-section">
-			<img src="{{ images.url }}" alt="porkbelly.jpg">
-		</div>
-		<div class="name">목우촌 프로포크 삼겹살(구이용)(100g)</div>
-		<div class="price">2,780원</div>
-		<div class="top-section">
-			<img src="{{ images.url }}" alt="shinemuscat.jpg">
-		</div>
-		<div class="name">샤인머스켓(1.5kg/박스)</div>
-		<div class="price">29,800원</div>
+<body>
+
+	<h1>상품목록</h1>
+	<div class="grid" style="text-align: center;">
+        <div class="goods_image" style="float: left; padding: 80px;">
+            <img src="/static/images/onion.jpg" alt="goods_1" width="400px">
+
+            <h4>양파</h4>
+            <br><font color="gray">개당</font>
+            <p><h4>￦1,500</h4></p>
+        </div>
+
+        <div class="goods_image" style="float: left; padding: 80px;">
+            <img src="/static/images/porkbelly.jpg" alt="goods_2" width="400px">
+
+            <h4>목우촌 프로포크 삼겹살(구이용)(100g)</h4>
+            <br><font color="gray">100g당</font>
+            <p><h4>￦2,700</h4></p>
+        </div>
+
+		<div class="goods_image" style="float: left; padding: 80px;">
+            <img src="/static/images/shinemuscat.jpg" alt="goods_3" width="400px">
+
+            <h4>샤인머스켓(1.5kg/박스)</h4>
+            <br><font color="gray">박스당</font>
+            <p><h4>￦29,800</h4></p>
+        </div>
+		
+		<div class="goods_image" style="float: left; padding: 80px;">
+
+            <img src="/static/images/paprika.jpg" alt="goods_4" width="400px">
+
+            <h4>피망</h4>
+            <br><font color="gray">개당</font>
+            <p><h4>￦1,500</h4></p>
+
+        </div>
+            
+        <div class="goods_image" style="float: left; padding: 80px;">
+
+            <img src="/static/images/potato.jpg" alt="goods_5" width="400px">
+
+            <h4>감자</h4>
+            <br><font color="gray">개당</font>
+            <p><h4>￦1,500</h4></p>
+
+        </div>
+
+        <div class="goods_image" style="float: left; padding: 80px;">
+
+            <img src="/static/images/carot.jpg" alt="goods_6" width="400px">
+            <h4>당근</h4>
+            <br><font color="gray">개당</font>
+            <p><h4>￦1,500</h4></p>
+
+        </div>
 	</div>
 </body>
 </script>
