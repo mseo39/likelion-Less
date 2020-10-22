@@ -19,4 +19,4 @@ class Event(models.Model):
     description = models.TextField()
 
     def __str__(self): #제목에 오브젝트가 아니라 이름이 나오도록
-        return self.name
+        return self.title
