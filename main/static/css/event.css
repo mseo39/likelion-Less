@@ -1,6 +1,11 @@
-h1{
+section div h1{
     font-size: larger;
     color: #9fc93c;
+}
+
+section{
+    margin-bottom: 0rem;
+    background-color: #9fc93c;
 }
 
 label{
