@@ -69,3 +69,6 @@ def payment(request):
 
 def goods(request):
     return render(request,'goods.html')
+
+def mypage(request):
+    return render(request,'mypage.html')

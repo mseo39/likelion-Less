@@ -6,4 +6,5 @@ urlpatterns = [
     path('eventdetail/<int:event_id>', main.views.eventdetail, name="eventdetail"),
     path('payment', main.views.payment, name="payment"),
     path('goods', main.views.goods, name="goods"),
+    path('mypage', main.views.mypage, name="mypage"),
 ]
