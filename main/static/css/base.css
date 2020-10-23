@@ -2,19 +2,50 @@
 li{list-style: none;}
 a{text-decoration: none;}
 
-.page{
-    width: 1170px; margin: 0 auto;
+#logo{ line-height: 80px; float: left;
+    
+}
+.wrapper{
+    width: 1200px; margin: 0 auto; 
 }
 .clearfix{content: ''; display: block; clear: both;}
 
 header{
-    height: 70px; border: 1px solid #253342; position: fixed; width: 100%; z-index: 9999; top: 0; left: 0;
+    height: 80px; border-bottom: 2px solid #888B81; position: fixed; width: 100%; z-index: 9999; top: 0; left: 0;
+    background-color: white; font-weight: bold;
 }
 
-.menu{float: right;}
+.menu{float: right;  margin-top: 20px;}
 .menu li{float: left;}
-.menu a{ line-height: 70px; color: #888B81; padding: 0 15px; display: block;}
+.menu a{ line-height: 80px; color: #888B81; padding: 0 10px; }
 
-.page{
-    width: 1170px; margin: 0 auto;
+
+
+
+
+footer{
+    height: 100px;background-color: #888B81;  width: 100%; bottom: 0; left: 0; 
+}
+
+.foo_div{
+    float: left;
+    
+    margin-left: 18px;
+
+}
+
+.foo_div1{
+    text-align: center; 
+}
+
+.foo_div1 span{
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.foo_div1 p{
+    margin: 5px;
+    color:white;
+    font-weight: bold;
 }
