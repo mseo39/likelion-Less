@@ -11,13 +11,14 @@
         <ul>
             <h1 style="color: #8DB72A;">회원가입 페이지</h1>
             <div class="signup">
+                {% csrf_token %}
                 <input type="text" placeholder="name">
                 <br><br>
                 <input type="password" placeholder="password">
                 <br><br>
                 <input type="text" placeholder="email address">
                 <br><br>
-                <input type="submit" value="회원가입">
+                <input type="submit" value="회원가입" a hraf="http://127.0.0.1:8000/">
                 <p class="message">이미 계정이 있으신가요? <a href="http://127.0.0.1:8000/login/">로그인하기</a></p>
     </fieldset>
     </div>
