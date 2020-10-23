@@ -1,4 +1,5 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
 {% block content %}
 {% load static %}
 
@@ -13,14 +14,16 @@
 <body>
     <!-- 메인 사진 -->
     <div class="box_image_1">
-        <img src="/static/images/main.jpg" alt="main" width="100%">
+        <img src="/static/images/main.jpg" alt="main" width="100%" style="margin-top: 82px;">
     </div>
 
     <!-- 상품목록-->
 
-    <a href="http://127.0.0.1:8000/goods">
-    <h1>상품목록</h1>
-    <div id="grid" style="text-align: center;">
+    
+    <a href="http://127.0.0.1:8000/goods"><h1 style="margin-left: 15px;">상품목록</h1></a>
+    <br> 
+    <hr width = "190px" color = "#8DB72A" size = "3" style="margin-left: 15px;">
+    <div id="grid" style="text-align: center;margin-top: 60px;">
         <div class="product_image1">
 
             <img src="/static/images/onion.jpg" alt="main_product" width="200px" style="padding-right: 50px;">
@@ -59,15 +62,17 @@
 
         </div>
     </div>
-    </a>
+    
 
     <!-- 이벤트 -->
-    <h1>EVENT</h1>
+    <h1 style="margin-left: 15px;">EVENT</h1>
+    <br> 
+    <hr width = "190px" color = "#8DB72A" size = "3" style="margin-left: 15px;">
     <div id="grid_2">
         <div class="main_event">
             <img src="/static/images/onegreen.jpg" alt="event_1" width="500px" >
                 <div class="main_event_text">
-                    <h3>#용기내 캠페인</h3>
+                    <h3><font color="#8DB72A">#용기내</font> 캠페인</h3><br>
                     <p>롯데마트는 용기내 캠페인과 함께합니다.</p>
                 </div>
         </div>
@@ -75,7 +80,7 @@
         <div class="main_event_2">
             <img src="/static/images/lifegreen.jpg" alt="event_2" width="600px">
             
-            <h3>#NO PLASTIC</h3>
+            <h3><font style="color:rgb(228,41,28)">#NO</font> PLASTIC</h3><br>
             <p>매년 7월3일은 노 플라스틱날<br> 롯데마트가 2025년 까지 플라스틱을 줄이기 위해 노력하겠습니다. </p>
             
         </div>
@@ -84,7 +89,7 @@
 
             <img src="/static/images/sidedish.jpg" alt="event_3" width="600px">
 
-            <h3>반찬 용기 가져오세요!</h3>
+            <h3><font style="color:rgb(228,41,28)">반찬 용기</font> 가져오세요!</h3><br>
             <p>반찬 용기를 가져오면 반찬 20%를 더 드립니다!!!</p>
 
         </div>
