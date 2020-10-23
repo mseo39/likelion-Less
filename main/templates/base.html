@@ -8,38 +8,41 @@
    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
+<!-- 헤더 -->
    <header>
-      <div class="page">
-         <div id="logo">
-            <img src="/static/images/main.png" alt="logo">
+      <div class="wrapper">
+         <div id="logo"><a href="{% url 'main' %}" >
+            <img src="/static/images/less_logo.png" alt="logo" width="80px">
          </div>
          <nav>
             <ul class="menu">
-               <li><a href="{% url 'goods' %}">상품</a></li>
-               <li><a href="{% url 'event' %}">이벤트</a></li>
-               <li><a href="{% url 'mypage' %}">마이페이지</a></li>
+               <li><a href="{% url 'goods' %}" >상품</a></li>
+               <li><a href="{% url 'event' %}" >이벤트</a></li>
+               <li><a href="">마이페이지</a></li>
                {% if user.is_authenticated %}
-                 
-               <a href="{% url 'logout' %}">
-                  <button>로그아웃</button>
-                </a>
-
-               어서오세요! {{user}}님
-
+                 <li><a> 어서오세요! {{user}}님 </a></li>
+               <li><a href="{% url 'logout' %}" type="submit" >로그아웃</a></li>
                {% else %}
-                
-               <a href="{% url 'signup' %}">
-                    <button>회원가입</button>
-                  </a>
-
-               <a href="{% url 'login' %}">
-                    <button>로그인</button>
-                </a>
+               <li><a href="{% url 'login' %}" type="submit">로그인</a></li>
                {% endif %}
             </ul>
          </nav>
          </div>
       </header>
 
-   {% block main %}
-     {% endblock %}
+   {% block content %}
+   {% endblock %}
+
+   <!--푸터-->
+   <footer>
+      <div class="foo_div">
+         <img src="/static/images/less_logo.png" alt="logo" width="90px">
+      </div>
+      <div class="foo_div1">
+         <span>LESS</span><span> | </span>
+         <span> 순천향대 less 팀 </span><span> | </span>
+         <p> less는 세계 환경을 위해 일회용품, 비닐봉지의 사용을 줄이고 있습니다. </p>
+      </div>
+   </footer>
+</body>
+</html>
