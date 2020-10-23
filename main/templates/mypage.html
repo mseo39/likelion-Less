@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 {%load static%}
 
+{% block content %}
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main</title>
+    <title>less - 마이페이지</title>
     <link rel="stylesheet" href="{% static 'css/mypage.css' %}">
 </head>
 
 <body>
     <div class="container">
-        <h1 style="color: #8DB72A;"><img src="/static/images/logo.png" alt="logo" width="200px">마이페이지</h1>
+    <br><br><br><br>
+        <h1 style="color: #8DB72A; margin-top: 14px;">마이페이지</h1>
         <form>
+        <br><br><br>
             <fieldset>
                 <legend style="color: #888B81;">
                     <h1>나의 혜택 관리</h1>
@@ -34,9 +37,10 @@
 
                     <div class="point" style="float: left; padding: 80px;">
                         <h1 style="color: #888B81;">누적 할인 금액</h1>
-                        <h1 style="color: #8DB72A;">4500원</h1>
+                        <h1 style="color: #8DB72A;">3500원</h1>
                     </div>
             </fieldset>
+            <br><br><br><br>
             <fieldset>
                 <legend style="color: #888B81;">
                     <h1>장바구니에 담은 상품</h1>
@@ -64,6 +68,7 @@
 
                     </div>
             </fieldset>
+            <br><br><br><br>
             <fieldset>
                 <legend style="color: #888B81;">
                     <h1>최근 본 상품</h1>
@@ -92,3 +97,4 @@
 </body>
 
 </html>
+{% endblock %}

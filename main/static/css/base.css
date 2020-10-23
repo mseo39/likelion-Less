@@ -11,8 +11,8 @@ a{text-decoration: none;}
 .clearfix{content: ''; display: block; clear: both;}
 
 header{
-    height: 80px; border-bottom: 2px solid #888B81; position: fixed; width: 100%; z-index: 9999; top: 0; left: 0;
-    background-color: white; font-weight: bold;
+    height: 80px; border-bottom: 2px solid #888B81; box-shadow: 10px 10px 30px #c2c4c4; position: fixed; width: 100%; z-index: 9999; top: 0; left: 0;
+    background-color: white; font-weight: bold; transition: opacity 1s; 
 }
 
 .menu{float: right;  margin-top: 20px;}
