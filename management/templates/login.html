@@ -1,28 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>less - 로그인</title>
-    <link rel="stylesheet" type="text/css" href="/static/login.css">
+    <link rel="stylesheet"  href="{% static 'css/login.css' %}">
 </head>
 
 <body>
-    <div id="login" align="center">
-        <img src="/static/images/logo.png" alt="logo" width="200px">
-        <fieldset>
-            <ul>
-                <h1 style="color: #8DB72A;">로그인 페이지</h1>
-                <form method="POST" action="">
-                    <div class="login">
-                        {% csrf_token %}
-                        <input type="text" placeholder="username">
-                        <br><br>
-                        <input type="password" placeholder="password">
-                        <br><br>
-                        <input type="submit" value="로그인" a hraf="http://127.0.0.1:8000/">
-                        <p class="message">계정이 없으신가요? <a href="http://127.0.0.1:8000/signup/">회원가입하기</a></p>
-                    </div>
+    <div class="loginbox" align="center">
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="login_image">
+            <img src="/static/images/less_2.png"  alt="less_logo" width="30%" style="margin-top: 124px;">
+        <div>
+        <div class="login-page" style="padding-top: 20px;">
+            <div class="form">
+                <form class="login-form">
+                    <input type="text" placeholder="아이디"/><br>
+                    <input type="password" placeholder="비밀번호"/><br>
+                    <button>login</button>
+                    
                 </form>
-        </fieldset>
+             </div>
+        </div>
     </div>
 </body>
+    {% endblock %}
+</html>
