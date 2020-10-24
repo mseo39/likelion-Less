@@ -48,7 +48,7 @@ def update(request, cl_id):
 
 def eventdetail(request, event_id): #views.py의 pk변수명과 urls.py의 변수명은 같아야 함
     event = get_object_or_404(Event, pk = event_id) #모델과 pk를 designer_id라고 부를거야
-    return render(request, 'event.html',{'event':event})
+    return render(request, 'eventdetail.html',{'event':event})
     #값을 보낼거임
 
 def event(request):
