@@ -1,19 +1,32 @@
 {% extends "base.html" %}
 {%load static%}
-
-{% block link %}
-{% static 'css/eventdetail.css' %}
-{% endblock  %}
 {% block content  %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .text {
+            text-align: center;
+        }
+    </style>
+    <title>이벤트</title>
+    <link rel="stylesheet" href="static 'css/eventdetail.css'">
+</head>
+
 
 <div class="container">
-    <div id="event" class="row featurette">
-        <div class="col-md-4">
-            <img src="{{ event.image.url }}" width="150%" alt="Event_Image">
+    <div class="text">
+        <div class="text">
+            <br><br><br><br><br>
+            <img src="{{ event.image.url }}" width="30%" alt="Event_Image">
         </div>
-        <div class="col-md-6">
-            <h2 class="featurette-heading">{{ event.title }}<span id="namedeco" class="text-muted"> 이벤트</span></h2>
-            <p class="lead">{{ event.description }}</p>
+        <div class="text">
+            <br><br><br>
+            <h2 style="color: #8DB72A;">{{ event.title }}</h2>
+            <br><br>
+            <p style="color: #888B81;">{{ event.description }}</p>
+            <br><br><br>
         </div>
     </div>
 </div>
