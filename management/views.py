@@ -1,16 +1,29 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import User
 from django.contrib.auth.views import LoginView
+from main.forms import UserForm
+from main.forms import LoginForm
 
 def signup(request):
-    regi_form = UserCreationForm()
     if request.method == "POST":
-        filled_form = UserCreationForm(request.POST)
-        if filled_form.is_valid():
-            filled_form.save()
-            return redirect('index')
+        form = UserForm(request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            login(request, new_user)
+            return redirect('base')
         
-    return render(request, 'signup.html', {'regi_form':regi_form})
+    return render(request, 'signup.html')
 
-class MyLoginView(LoginView):
-    template_name = 'login.html'
+def login(request):
+    if request.method == 'POST':
+        form = LoginForm(request,POST)
+        username=request.POST['username']
+        password=request.POST['password']
+        if user is not None:
+            login(request, user)
+            return redirect('base')
+        else:
+            return HttpResponse('Login failed. Try again.')
+    else:
+        form = LoginForm()
+        return render(request, 'login.html')

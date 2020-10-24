@@ -1,5 +1,6 @@
 from django import forms
 from .models import Product, Client
+from django.contrib.auth.models import User
 
 class ClForm(forms.ModelForm):
     class Meta:
@@ -23,3 +24,15 @@ class PDForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = ('title', 'content',)
+
+class UserForm(forms.ModelForm):
+
+    class Meta:
+        model=User
+        fields=['username','password','email']
+
+class LoginForm(forms.ModelForm):
+
+    class Meta:
+        model=User
+        fields=['username','password']

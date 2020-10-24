@@ -1,25 +1,28 @@
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
-	<title>less - 로그인</title>
-	<link rel="stylesheet" type="text/css" href="/static/login.css">
+    <meta charset="UTF-8">
+    <title>less - 로그인</title>
+    <link rel="stylesheet" type="text/css" href="/static/login.css">
 </head>
 
 <body>
     <div id="login" align="center">
-    <img src="/static/images/logo.png" alt="logo" width="200px">
-    <fieldset>
-        <ul>
-            <h1 style="color: #8DB72A;">로그인 페이지</h1>
-            <div class="login">
-                {% csrf_token %}
-                <input type="text" placeholder="username">
-                <br><br>
-                <input type="password" placeholder="password">
-                <br><br>
-                <input type="submit" value="로그인" a hraf="http://127.0.0.1:8000/">
-                <p class="message">계정이 없으신가요? <a href="http://127.0.0.1:8000/signup/">회원가입하기</a></p>
-            </div>
-    </fieldset>
+        <img src="/static/images/logo.png" alt="logo" width="200px">
+        <fieldset>
+            <ul>
+                <h1 style="color: #8DB72A;">로그인 페이지</h1>
+                <form method="POST" action="">
+                    <div class="login">
+                        {% csrf_token %}
+                        <input type="text" placeholder="username">
+                        <br><br>
+                        <input type="password" placeholder="password">
+                        <br><br>
+                        <input type="submit" value="로그인" a hraf="http://127.0.0.1:8000/">
+                        <p class="message">계정이 없으신가요? <a href="http://127.0.0.1:8000/signup/">회원가입하기</a></p>
+                    </div>
+                </form>
+        </fieldset>
     </div>
 </body>
