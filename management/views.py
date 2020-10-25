@@ -7,11 +7,9 @@ from main.forms import LoginForm
 
 def signup(request):
     if request.method == "POST":
-        form = UserForm(request.POST)
-        if form.is_valid():
-            new_user = User.objects.create_user(**form.cleaned_data)
-            login(request, new_user)
-            return redirect('main')
+        new_user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'])
+        auth.login(request, new_user)
+        return redirect('main')
         
     return render(request, 'signup.html')
 
