@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-.login-page .signup{
+.login-page{
   width: 600px;
   padding: 8% 0 0;
   margin: auto;
@@ -14,7 +14,7 @@
   padding: 45px;
   text-align: center;
 }
-.form input .signup-form {
+.form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
