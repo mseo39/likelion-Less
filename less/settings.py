@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'management.apps.ManagementConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+	'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'less.urls'
@@ -83,6 +87,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+db_from_env = dj_database_url.config(conn_max_age=500)   # DB 설정부분 아래에 입력
+
+DATABASES['default'].update(db_from_env)  
 
 
 # Password validation
@@ -127,7 +134,8 @@ STATIC_DIRS =[
     os.path.join(BASE_DIR, 'main', 'static') #static 파일들이 들어있는 경로
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') #stasic 파일을 모을 디렉터리
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #stasic 파일을 모을 디렉터리
 #static파일 모으기_ python manage.py collectstatic
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
