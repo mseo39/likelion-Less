@@ -4,6 +4,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib import auth
 from main.forms import UserForm
 from main.forms import LoginForm
+from django.contrib.auth.views import LogoutView
 
 def signup(request):
     if request.method == "POST":
@@ -25,9 +26,3 @@ def login(request):
             return HttpResponse('Login failed. Try again.')
     else:
         return render(request, 'login.html')
-
-def logout(request):
-    if request.method=="POST":
-        auth.logout(request)
-        return redirect('main')
-    return render(request, 'login.html')
