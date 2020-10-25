@@ -7,9 +7,14 @@
 *.pot
 *.pyc
 __pycache__/
+*.log
+*.pot
+*.pyc
+*.py[cod]
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+.DS_Store
 media
 chany
 hyerin
@@ -32,6 +37,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+venv/
 eggs/
 .eggs/
 lib/
